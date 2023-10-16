@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/joseph-porfolio/static/css/main.15b9ac65.css",
+    "main.js": "/joseph-porfolio/static/js/main.420a3285.js",
+    "static/media/hero-image.jpg": "/joseph-porfolio/static/media/hero-image.4aed6fbfe44c4f6b619e.jpg",
+    "static/media/my_image.png": "/joseph-porfolio/static/media/my_image.721f4e94e3690c378483.png",
+    "static/media/mySuitImage.png": "/joseph-porfolio/static/media/mySuitImage.2e64ae633fa218ee6a45.png",
+    "index.html": "/joseph-porfolio/index.html",
+    "main.15b9ac65.css.map": "/joseph-porfolio/static/css/main.15b9ac65.css.map",
+    "main.420a3285.js.map": "/joseph-porfolio/static/js/main.420a3285.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15b9ac65.css",
+    "static/js/main.420a3285.js"
+  ]
+}
