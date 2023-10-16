@@ -1,0 +1,99 @@
+#intro{
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    top: 6rem;
+    right: 0;
+    object-fit: cover;
+    width: 27rem;
+    border-radius: 12rem;
+}
+
+.introContent{
+    height: inherit;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello, .introPara{
+    font-size: 1.75rem;
+    font-weight: normal;
+}
+
+.introPara{
+    letter-spacing: .5rem;
+}
+.introNameRed{
+    color: #d72036;
+}
+
+.btn{
+    margin: 1rem 0;
+    padding: 0.71rem 1.3rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.btn-hire{
+    background: #d72036;
+}
+
+.btn-my-works{
+    border: 1px solid white;
+}
+
+
+.btn:hover{
+    background: #3c3c3c;
+    color: white;
+}
+
+@media screen and (max-width: 840px ){
+    .bg {
+        width: 25rem;
+        right: 2rem;
+    }
+    .introPara{
+        letter-spacing: 1px;
+    }
+
+}
+
+@media screen and (max-width: 480px ){
+    .introContent{
+        /* margin-top: -8rem; */
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .introPara{
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .bg {
+        right: 50;
+        transform: translateX(0);
+        /* width: 20rem; */
+        /* right: 1.25rem; */
+    }
+    .btn-my-works{
+        border: 1px solid black;
+        color: black;
+    }
+}

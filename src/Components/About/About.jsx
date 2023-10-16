@@ -1,0 +1,38 @@
+import React from "react";
+import "./About.css";
+import image from "../../Assets/my_image.png";
+
+const About = () => {
+  return (
+    <section className="about-section">
+      <img src={image} alt="" className="about-img" />
+      <div className="about-right">
+        <h1 className="about-right-title">About Me</h1>
+        <h1 className="about-title-grey">About</h1>
+        <p className="about-right-para">
+          I am a skilled and passionate web designer with experience in creating
+          visually appealing and user friendly web app. I have a strong
+          understanding of design and a keen eye for detail.
+        </p>
+
+        <div className="about-info">
+          <div className="about-left-info">
+            <li>Name:</li>
+            <li id="address">Address:</li>
+            <li>Email:</li>
+            <li>Phone:</li>
+          </div>
+          <div className="about-right-info">
+            <li>Igbaji Joseph Kolitem</li>
+            <li>14. Ahmadu Bello Way, Victoria Island, lagos</li>
+            <li>Igbajijoseph.k@gmail.com</li>
+            <li>(+234) 9036518841</li>
+          </div>
+        </div>
+        <button className="about-download-cv-btn">Download CV</button>
+      </div>
+    </section>
+  );
+};
+
+export default About;
