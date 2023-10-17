@@ -1,16 +1,23 @@
 .navbar{
-    height: 5rem;
+    /* height: 5rem; */
     width: 100vw;
     max-width: 75rem;
     margin: 1rem auto 0;
     padding: 1rem 2rem;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
     position: sticky;
     top: 0;
     z-index: 3;
     overflow: hidden;
+}
+
+.nav-top{
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo{
@@ -28,10 +35,11 @@
     transition: 0.3s;
 }
 
-.desktopMenuListItem:hover, .logo:hover{
+.desktopMenuListItem:hover, .logo:hover, .mobileMenuListItem:hover{
     color: #d72036;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid #d72036;
+    cursor: pointer;
 }
 
 .desktopMenuBtn{
@@ -45,8 +53,50 @@
 }
 
 .desktopMenuBtn:hover{
-   
+   cursor: pointer;
     background: #d72036;
     color: white;
+}
+
+.active{
+    color: #d72036;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #d72036;
+}
+
+.hamburgerMenu{
+    cursor: pointer;
+    display: none;
+}
+
+.mobileMenu{
+    /* position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 100; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+
+.mobileMenuListItem{
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 840px ){
+    .hamburgerMenu{
+        display: block;
+    }
+
+    .desktopMenu, .desktopMenuBtn{
+        display: none;
+    }
+
+    .navbar{
+        margin-top: 0;
+        background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    }
 }
 

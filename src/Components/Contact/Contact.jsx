@@ -6,7 +6,7 @@ import ContactCard from "../ContactCard/ContactCard";
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <section id="contact">
       <h2 className="contact-title">Contact Me</h2>
       <h2 className="contact-title-grey">Contact</h2>
       <p className="contact-para">
@@ -82,7 +82,9 @@ const Contact = () => {
           <input type="text" placeholder="Your Name" />
           <input type="email" placeholder="Your Email" />
           <textarea className="form-textarea" placeholder="message"></textarea>
-          <button className="contact-submit-btn">Send Message</button>
+          <button type="submit" className="contact-submit-btn">
+            Send Message
+          </button>
         </form>
       </div>
     </section>

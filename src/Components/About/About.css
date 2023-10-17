@@ -1,4 +1,4 @@
-.about-section{
+#about-section{
     width: 100vw;
     max-width: 75rem;
     margin: 0 auto;
@@ -91,7 +91,7 @@
 }
 
 @media screen and (max-width: 480px ){
-    .about-section{
+    #about-section{
         display: flex;
         flex-direction: column;
     }
