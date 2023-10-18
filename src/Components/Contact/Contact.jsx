@@ -1,10 +1,33 @@
 import "./Contact.css";
 import mySuitImage from "../../Assets/mySuitImage.png";
 
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import ContactCard from "../ContactCard/ContactCard";
 
 const Contact = () => {
+  const form = useRef();
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_i2p7abj",
+        "template_o5cc6la",
+        form.current,
+        "7W-YhE1AZE0LABRhj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <section id="contact">
       <h2 className="contact-title">Contact Me</h2>
@@ -78,11 +101,15 @@ const Contact = () => {
       </div>
       <div className="contact-form-section">
         <img src={mySuitImage} alt="" />
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
-          <textarea className="form-textarea" placeholder="message"></textarea>
-          <button type="submit" className="contact-submit-btn">
+        <form className="contact-form" ref={form} onSubmit={handleFormSubmit}>
+          <input type="text" placeholder="Your Name" name="your_name" />
+          <input type="email" placeholder="Your Email" name="your_email" />
+          <textarea
+            className="form-textarea"
+            placeholder="message"
+            name="message"
+          ></textarea>
+          <button type="submit" value="send" className="contact-submit-btn">
             Send Message
           </button>
         </form>
