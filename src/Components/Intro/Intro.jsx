@@ -17,7 +17,7 @@ const Intro = () => {
         </div>
         <p className="introPara">A freelance Developer</p>
         <div className="introBtn">
-          <Link>
+          <Link to="contact" smooth={true} offset={-50} duration={500}>
             <button className="btn btn-hire">Hire Me</button>{" "}
           </Link>
           <Link>
