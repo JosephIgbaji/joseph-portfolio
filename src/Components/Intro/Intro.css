@@ -3,8 +3,8 @@
     width: 100vw;
     max-width: 75rem;
     margin: 0 auto;
-    overflow: hidden;
     position: relative;
+    overflow-x: hidden;
 }
 
 .bg{
@@ -87,10 +87,11 @@
         font-weight: 600;
     }
     .bg {
-        right: 50;
-        transform: translateX(0);
-        /* width: 20rem; */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20rem;
         /* right: 1.25rem; */
+
     }
     .btn-my-works{
         border: 1px solid black;

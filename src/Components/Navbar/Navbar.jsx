@@ -78,7 +78,7 @@ const Navbar = () => {
           spy={true}
           to="intro"
           smooth={true}
-          offset={-50}
+          offset={-200}
           duration={500}
           className="mobileMenuListItem"
           onClick={() => setShowMenu(false)}
@@ -90,7 +90,7 @@ const Navbar = () => {
           spy={true}
           to="about-section"
           smooth={true}
-          offset={-50}
+          offset={-280}
           duration={500}
           className="mobileMenuListItem"
           onClick={() => setShowMenu(false)}
@@ -102,7 +102,7 @@ const Navbar = () => {
           spy={true}
           to="skills"
           smooth={true}
-          offset={-40}
+          offset={-250}
           duration={500}
           className="mobileMenuListItem"
           onClick={() => setShowMenu(false)}
@@ -115,7 +115,7 @@ const Navbar = () => {
           spy={true}
           to="contact"
           smooth={true}
-          offset={-50}
+          offset={-300}
           duration={500}
           className="mobileMenuListItem"
           onClick={() => setShowMenu(false)}

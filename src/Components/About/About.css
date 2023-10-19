@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 5rem;
+    overflow-x: hidden;
 }
 
 .about-right{
@@ -97,6 +98,7 @@
     }
 
     .about-img{
+        width: 20rem;
         /* margin-left: -5rem; */
     }
 }

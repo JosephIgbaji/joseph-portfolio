@@ -7,6 +7,7 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    overflow-x: hidden;
 }
 .footer-top{
     display: flex;
@@ -83,8 +84,15 @@
 }
 
 @media screen and (max-width: 480px ){
+    .footer{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     .footer-top{
         flex-direction: column;
         gap: 2rem;
+    }
+    .footer-copyright{
+        font-size: .7rem;
     }
 }

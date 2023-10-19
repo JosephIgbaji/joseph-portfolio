@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow-x: hidden;
 }
 
 .contact-title{
@@ -25,7 +26,8 @@
 
 .contact-para{
     text-align: center;
-    margin-bottom: 3rem
+    margin-bottom: 3rem;
+    padding: 1rem;
 }
 
 .contact-form-section{

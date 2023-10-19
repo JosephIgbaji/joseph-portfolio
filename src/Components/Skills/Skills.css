@@ -7,7 +7,8 @@
     align-items: center;
     position: relative;
     padding: 3rem;
-    overflow: hidden;
+    overflow-x: hidden;
+    /* overflow: hidden; */
     margin-bottom: 5rem;
 }
 
