@@ -1,16 +1,17 @@
 #intro{
-    height: calc(100vh - 4rem);
+    height: calc(80vh - 4rem);
     width: 100vw;
     max-width: 75rem;
     margin: 0 auto;
+    /* margin-bottom: 5rem; */
     position: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .bg{
     position: absolute;
     z-index: -1;
-    top: 6rem;
+    top: 2rem;
     right: 0;
     object-fit: cover;
     width: 27rem;
@@ -82,7 +83,6 @@
         text-align: center;
     }
     .introPara{
-        color: black;
         font-size: 1.5rem;
         font-weight: 600;
     }
@@ -94,7 +94,7 @@
 
     }
     .btn-my-works{
-        border: 1px solid black;
-        color: black;
+        /* border: 1px solid black;
+        color: black; */
     }
 }
