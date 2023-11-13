@@ -71,6 +71,11 @@
     transition: 0.3s;
 }
 
+.about-download-cv-btn a{
+    list-style: none;
+    color: white;
+}
+
 .about-download-cv-btn:hover{
     background: #3c3c3c;
 }

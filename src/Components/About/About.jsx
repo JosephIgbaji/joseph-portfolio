@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import image from "../../Assets/my_image.png";
+import myCv from "../documents/Joseph-Igbaji-CV.pdf";
 
 const About = () => {
   return (
@@ -29,7 +30,11 @@ const About = () => {
             <li>(+234) 9036518841</li>
           </div>
         </div>
-        <button className="about-download-cv-btn">Download CV</button>
+        <button className="about-download-cv-btn">
+          <a href={myCv} download="joseph-cv" target="_blank" rel="noreferrer">
+            Download CV
+          </a>
+        </button>
       </div>
     </section>
   );

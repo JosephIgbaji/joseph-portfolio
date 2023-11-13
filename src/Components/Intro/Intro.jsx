@@ -9,13 +9,13 @@ const Intro = () => {
       <div className="introContent">
         <span className="hello">Hello,</span>
         <div className="introText">
-          I'm{" "}
+          I'm
           <span className="introNameRed">
             Igbaji <br /> Joseph
-          </span>{" "}
+          </span>
           Kolitem
         </div>
-        <p className="introPara">A freelance Developer</p>
+        <p className="introPara">Network Engineer Full-Stack Developer</p>
         <div className="introBtn">
           <Link to="contact" smooth={true} offset={-50} duration={500}>
             <button className="btn btn-hire">Hire Me</button>{" "}
