@@ -46,9 +46,9 @@ const Navbar = () => {
             Skills
           </Link>
 
-          <Link to="/lifestyle" className="desktopMenuListItem">
+          {/* <Link to="/lifestyle" className="desktopMenuListItem">
             Lifestyle
-          </Link>
+          </Link> */}
         </div>
         <Link to="contact" smooth={true} offset={-50} duration={500}>
           <button className="desktopMenuBtn">Contact me</button>
