@@ -32,7 +32,7 @@ const Footer = () => {
               }
             />
             <SocialIcons
-              url="https://linkedin.com"
+              url="https://twitter.com"
               svg={
                 <svg
                   width="48"
@@ -49,7 +49,7 @@ const Footer = () => {
               }
             />
             <SocialIcons
-              url="https://twitter.com"
+              url="https://www.linkedin.com/in/josephigbaji"
               svg={
                 <svg
                   width="48"
@@ -238,7 +238,9 @@ export default Footer;
 function SocialIcons({ svg, url }) {
   return (
     <div className="social-icons">
-      <a href={url}>{svg}</a>
+      <a href={url} target="_blank">
+        {svg}
+      </a>
     </div>
   );
 }

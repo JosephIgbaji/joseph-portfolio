@@ -1,5 +1,5 @@
 import React from "react";
-import bg from "../../Assets/hero-image-nbg.png";
+import bg from "../../Assets/suit-hero-image.png";
 import "./Intro.css";
 import { Link } from "react-scroll";
 

@@ -11,10 +11,10 @@
 .bg{
     position: absolute;
     z-index: -1;
-    top: 2rem;
+    top: -5rem;
     right: 0;
     object-fit: cover;
-    width: 27rem;
+    width: 35rem;
     border-radius: 12rem;
 }
 
@@ -68,8 +68,9 @@
 
 @media screen and (max-width: 840px ){
     .bg {
-        width: 25rem;
+        width: 28rem;
         right: 2rem;
+        top: -2rem;
     }
     .introPara{
         letter-spacing: 1px;
@@ -88,9 +89,10 @@
         font-weight: 600;
     }
     .bg {
+        top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 20rem;
+        width: 22rem;
         /* right: 1.25rem; */
 
     }
