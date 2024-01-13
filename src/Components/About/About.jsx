@@ -11,9 +11,10 @@ const About = () => {
         <h1 className="about-right-title">About Me</h1>
         <h1 className="about-title-grey">About</h1>
         <p className="about-right-para">
-          I am a skilled and passionate web designer with experience in creating
-          visually appealing and user friendly web app. I have a strong
-          understanding of design and a keen eye for detail.
+          I am a skilled and passionate fullstack and mobile developer with
+          experience in creating visually appealing and user friendly
+          applications. I have a strong understanding of Javascript, design
+          implementations and a keen eye for detail, etc.
         </p>
 
         <div className="about-info">
