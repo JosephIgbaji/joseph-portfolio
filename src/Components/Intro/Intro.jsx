@@ -16,7 +16,7 @@ const Intro = () => {
           Kolitem
         </div>
         <p className="introPara">
-          Network Engineer & <br /> Full-Stack Developer
+          Network Engineer, <br /> FullStack & Mobile Developer
         </p>
         <div className="introBtn">
           <Link to="contact" smooth={true} offset={-50} duration={500}>
