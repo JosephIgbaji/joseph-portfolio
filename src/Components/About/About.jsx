@@ -31,7 +31,12 @@ const About = () => {
           </div>
         </div>
         <button className="about-download-cv-btn">
-          <a href={myCv} download="joseph-cv" target="_blank" rel="noreferrer">
+          <a
+            href={myCv}
+            download="joseph-cv.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
             Download CV
           </a>
         </button>
