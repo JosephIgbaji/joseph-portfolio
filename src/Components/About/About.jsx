@@ -33,7 +33,8 @@ const About = () => {
         </div>
         <button className="about-download-cv-btn">
           <a
-            href={myCv}
+            // href={myCv}
+            href="https://drive.google.com/file/d/1_VHLgUKrK3yIUTEJ57n0WOZxKushdaOt/view?usp=drive_link"
             download="joseph-cv.pdf"
             target="_blank"
             rel="noreferrer"
