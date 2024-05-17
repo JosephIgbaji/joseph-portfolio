@@ -1,15 +1,31 @@
 import "./Contact.css";
+// import "../../globals.css";
 import mySuitImage from "../../Assets/mySuitImage.png";
+import Alert from "../Alert";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ContactCard from "../ContactCard/ContactCard";
+import { BeatLoader } from "react-spinners";
 
 const Contact = () => {
   const form = useRef();
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [sending, setSending] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    setSending(true);
+
+    if (!name || !email || !message) {
+      setAlertMessage("Kindly Complete all the fields.");
+      setSending(false);
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -20,12 +36,23 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setName("");
+          setEmail("");
+          setMessage("");
+          setAlertMessage("Email Sent successfully");
+          console.log(result);
+          setSending(false);
+          // window.location.href = "/";
         },
         (error) => {
-          console.log(error.text);
+          setAlertMessage(error.text);
+          setSending(false);
         }
       );
+  };
+
+  const closeAlert = () => {
+    setAlertMessage("");
   };
 
   return (
@@ -101,19 +128,52 @@ const Contact = () => {
       </div>
       <div className="contact-form-section">
         <img src={mySuitImage} alt="" />
-        <form className="contact-form" ref={form} onSubmit={handleFormSubmit}>
-          <input type="text" placeholder="Your Name" name="your_name" />
-          <input type="email" placeholder="Your Email" name="your_email" />
+        <form
+          className="contact-form text-black"
+          ref={form}
+          onSubmit={handleFormSubmit}
+        >
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            placeholder="Your Name"
+            name="user_name"
+          />
+          <input
+            value={email}
+            name="user_email"
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="Your Email"
+          />
           <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             className="form-textarea"
             placeholder="message"
             name="message"
           ></textarea>
-          <button type="submit" value="send" className="contact-submit-btn">
-            Send Message
+          <button
+            type="submit"
+            value="send"
+            className="bg-primary p-2 text-white rounded-xl"
+          >
+            {sending ? (
+              <BeatLoader color="#ffffff" loading={true} />
+            ) : (
+              "Send Message"
+            )}
           </button>
         </form>
       </div>
+      {alertMessage && (
+        <div className="fixed top-0 w-screen h-screen z-50 bg-gray-200 bg-opacity-15">
+          <div className="w-full h-full flex items-center justify-center">
+            <Alert message={alertMessage} onClick={closeAlert} />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

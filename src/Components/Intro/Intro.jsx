@@ -18,11 +18,11 @@ const Intro = () => {
         <p className="introPara">
           Network Engineer, <br /> FullStack & Mobile Developer
         </p>
-        <div className="introBtn">
+        <div className="text-lg">
           <Link to="contact" smooth={true} offset={-50} duration={500}>
             <button className="btn btn-hire">Hire Me</button>{" "}
           </Link>
-          <Link>
+          <Link to="portfolio" smooth={true} offset={-50} duration={500}>
             <button className="btn btn-my-works">My Works</button>{" "}
           </Link>
         </div>

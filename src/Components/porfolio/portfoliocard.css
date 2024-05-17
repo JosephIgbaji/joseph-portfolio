@@ -1,0 +1,153 @@
+.card {
+    position: relative;
+   /* margin: 20px auto; */
+    transition: 1s box-shadow;
+  }
+  
+  .card:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  }
+  
+  .card:hover::before, .card:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 20rem;
+    height: 15.25rem;
+    background: #963260;
+    border-radius: 35px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  
+  .card:hover:after {
+    background: #18bc54;
+    animation: 2s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
+
+  .card{
+    width: 20rem;
+    height: 15.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: auto 2rem;
+    border-radius: 35px;
+    /* background: var(--Card-Color, #1A1A1A); */
+    background-color: #d8ded8;
+    /* overflow: hidden; */
+}
+
+.card hr{
+    width: 5rem;
+    height: .2rem;
+    background: #D72036;
+    border-radius: 5px;
+    border: none;
+    margin: 0;
+}
+
+.card p{
+    color: #737373;
+}
+
+@media screen and (max-width: 840px ){
+  .card{
+      width: 15rem;
+  }
+
+  .card:hover::before, .card:hover::after {
+    width: 15rem;
+  }
+
+}
+
+@media screen and (max-width: 480px ){
+  .card{
+    width: 20rem;
+  }
+
+  .card:hover::before, .card:hover::after {
+    width: 20rem;
+  }
+}
